@@ -11,16 +11,16 @@ function Main() {
 
   return (
     <main id="main">
-      {posts.map((post) => {
+      {posts.map(({postId, title, date, author, text, highlights, image}) => {
         return (
           <Post
-            key={post.postId}
-            title={post.title}
-            date={post.date}
-            author={post.author}
-            text={post.text}
-            highlights={post.highlights}
-            image={post.image}
+            key={postId}
+            title={title}
+            date={date}
+            author={author}
+            text={text}
+            highlights={highlights}
+            image={image}
           ></Post>
         );
       })}
